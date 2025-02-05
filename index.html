@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange Rates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Live Currency Exchange Rates</h1>
+        <p>Updated in real-time using the HG Brasil API</p>
+    </header>
+
+    <main class="container">
+        <!-- Currency List Section -->
+        <section class="currency-list">
+            <h2>Exchange Rates</h2>
+            <div id="currencies">
+                 <!-- Dollar currency conversion -->
+                 <div class="currency-card usd">
+                    <div class="usd-brl">
+                        <h3>Dollar → Real</h3>
+                        <p class="initial"></p>
+                        <input type="number" placeholder="1">
+                        <p class="result"></p>
+                    </div>
+                    <div class="brl-usd">
+                        <h3>Real → Dollar</h3>
+                        <p class="initial"></p>
+                        <input type="number" placeholder="1">
+                        <p class="result"></p>
+                    </div>
+                 </div>
+                 <!-- Euro currency conversion -->
+                 <div class="currency-card eur">
+                    <div class="eur-brl">
+                        <h3>Euro → Real</h3>
+                        <p class="initial"></p>
+                        <input type="number" placeholder="1">
+                        <p class="result"></p>
+                    </div>
+                    <div class="brl-eur">
+                        <h3>Real → Euro</h3>
+                        <p class="initial"></p>
+                        <input type="number" placeholder="1">
+                        <p class="result"></p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by <a href="https://hgbrasil.com/" target="_blank">HG Brasil API</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
