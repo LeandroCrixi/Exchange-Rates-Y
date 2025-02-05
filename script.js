@@ -1,5 +1,5 @@
 async function getData() {
-    const url = "https://api.hgbrasil.com/finance?format=json-cors&key=2bc2a6be";
+    const url = "https://api.hgbrasil.com/finance?format=json-cors&key=5dabf770";
     try {
         const response = await fetch(url);
         if (!response.ok) {
