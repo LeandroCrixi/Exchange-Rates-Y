@@ -16,11 +16,18 @@ async function getData() {
             return result
         }
 
+        const today = new Date();
+        const formattedDate = new Intl.DateTimeFormat('en-GB').format(today);
+        console.log(formattedDate);
+
+        document.querySelector('.currency-list h2').innerHTML += formattedDate
+
         //Setting the currency name and value
-        document.querySelector('.usd-brl .initial').innerHTML = brlCurrency('pt-BR', 'BRL', usdValue)
-        document.querySelector('.brl-usd .initial').innerHTML = brlCurrency('pt-BR', 'BRL', 1/usdValue)
-        document.querySelector('.eur-brl .initial').innerHTML = brlCurrency('pt-BR', 'BRL', eurValue)
-        document.querySelector('.brl-eur .initial').innerHTML = brlCurrency('pt-BR', 'BRL', 1/eurValue)
+        document.querySelector('.usd-brl .initial').innerHTML = 'Conversion rate: ' + brlCurrency('pt-BR', 'BRL', usdValue)
+        document.querySelector('.brl-usd .initial').innerHTML = 'Conversion rate: ' + brlCurrency('en-US', 'USD', 1/usdValue)
+        document.querySelector('.eur-brl .initial').innerHTML = 'Conversion rate: ' + brlCurrency('pt-BR', 'BRL', eurValue)
+        document.querySelector('.brl-eur .initial').innerHTML = 'Conversion rate: ' + brlCurrency('de-DE', 'EUR', 1/eurValue)
+        
 
         //Setting the result of the conversion
         //.usd-brl

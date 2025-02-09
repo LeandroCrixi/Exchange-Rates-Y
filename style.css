@@ -86,6 +86,11 @@ header p {
     margin-top: 5px;
 }
 
+.currency-card .initial{
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
 .currency-card .result{
     color: #666;
 }

@@ -16,20 +16,20 @@
     <main class="container">
         <!-- Currency List Section -->
         <section class="currency-list">
-            <h2>Exchange Rates</h2>
+            <h2>Exchange Rates as of </h2>
             <div id="currencies">
                  <!-- Dollar currency conversion -->
                  <div class="currency-card usd">
                     <div class="usd-brl">
                         <h3>Dollar → Real</h3>
                         <p class="initial"></p>
-                        <input type="number" placeholder="1">
+                        <input type="number" placeholder="$ 1.00">
                         <p class="result"></p>
                     </div>
                     <div class="brl-usd">
                         <h3>Real → Dollar</h3>
                         <p class="initial"></p>
-                        <input type="number" placeholder="1">
+                        <input type="number" placeholder="R$ 1.00">
                         <p class="result"></p>
                     </div>
                  </div>
@@ -38,13 +38,13 @@
                     <div class="eur-brl">
                         <h3>Euro → Real</h3>
                         <p class="initial"></p>
-                        <input type="number" placeholder="1">
+                        <input type="number" placeholder="1.00 €">
                         <p class="result"></p>
                     </div>
                     <div class="brl-eur">
                         <h3>Real → Euro</h3>
                         <p class="initial"></p>
-                        <input type="number" placeholder="1">
+                        <input type="number" placeholder="R$ 1.00">
                         <p class="result"></p>
                     </div>
                  </div>
@@ -52,9 +52,19 @@
         </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <p>Powered by <a href="https://hgbrasil.com/" target="_blank">HG Brasil API</a></p>
+        <br>
+        <p><a href="https://leandro-crixi.netlify.app/">Leandro Crisci</a> &copy; <span id="current-year"></span> 
+            Currency Exchange Rates</p>
     </footer>
+
+    <!-- Script to update the year dynamically -->
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+
 
     <script src="script.js"></script>
 
